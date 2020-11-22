@@ -1,6 +1,6 @@
 # monospace-raytracer
 
-Renders 3D objects by raytracing isometric rays against a solid.
+Renders 3D objects by raytracing isometric rays against a solid and uses monospace characters to simulate lighting.
 
 ![demo](https://github.com/peerhenry/monospace-raytracer/blob/master/image.png)
 
