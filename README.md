@@ -1,4 +1,8 @@
-# char-space
+# monospace-raytracer
+
+Renders 3D objects by raytracing isometric rays against a solid.
+
+![demo](https://github.com/peerhenry/monospace-raytracer/blob/master/image.png)
 
 ## Project setup
 ```
