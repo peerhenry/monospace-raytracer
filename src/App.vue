@@ -3,8 +3,7 @@
   //- p , - ~ : ; = ! * # $ @
   p {{ titleMessage }}
   div(v-for="(line, index) in lines" :key="index" v-html="line")
-  button(@click="stop") stop
-  button(@click="play") play
+  button(@click="toggle") {{ interval ? 'Pause ' : 'Play' }}
 </template>
 
 <script lang="ts">
@@ -57,16 +56,17 @@ export default defineComponent({
   },
   methods: {
     setup() {
-      this.objects.push(createCube(0.8))
+      this.objects.push(createCube(0.9))
+      // this.objects.push(
+      //   new Box(new Vec3(-0.1, -0.3, -0.45), new Vec3(0.1, 0.3, 0.45))
+      // )
     },
-    play() {
-      if (!this.interval) {
-        this.interval = window.setInterval(() => this.tick(), 40)
+    toggle() {
+      if (!this.interval) this.interval = window.setInterval(() => this.tick(), 40)
+      else {
+        window.clearInterval(this.interval)
+        this.interval = undefined  
       }
-    },
-    stop() {
-      window.clearInterval(this.interval)
-      this.interval = undefined
     },
     tick() {
       // var t0 = performance.now()
@@ -140,8 +140,7 @@ export default defineComponent({
   },
   mounted() {
     this.setup()
-    // this.tick()
-    this.play()
+    this.toggle()
   }
 })
 </script>
