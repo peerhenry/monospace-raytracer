@@ -119,7 +119,6 @@ export default defineComponent({
         if (result.t !== Number.MAX_VALUE && result.normal !== null) {
           const amount = -result.normal.dot(this.environmentState.osLight)
           nextChar = '.'
-          '.,-~:;=!*#$@'
           const luminance = ['.', ',', '-', '~', ':', ';', '=', '!', '*', '#', '$', '@']
           const steps = 12
           const step = 1/steps

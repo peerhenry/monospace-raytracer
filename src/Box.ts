@@ -123,11 +123,10 @@ export default class Box {
         returnNormal = new Vec3(0, 0, zn)
         break
     }
-
-    // debug
-      return {
-        t,
-        normal: returnNormal
-      }
+    
+    return {
+      t,
+      normal: returnNormal
+    }
   }
 }
