@@ -148,6 +148,6 @@ export default defineComponent({
 html, body
   background-color black
   color white
-  font-family consolas
+  font-family consolas, monospace
   font-size 10px
 </style>
